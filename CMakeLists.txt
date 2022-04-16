@@ -1,0 +1,50 @@
+cmake_minimum_required(VERSION 3.12)
+
+# HEADER
+list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+set(CMAKE_TOOLCHAIN_FILE "C:/Users/Konstantin/Documents/Code/external_projects/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
+
+project(sdl_opengl
+    VERSION 0.0.1
+    LANGUAGES C CXX
+    DESCRIPTION "try to efficently play a video in opengl"
+)
+
+# 3rd party libs
+include(FetchContent)
+FetchContent_Declare(
+  glad
+  URL      "C:/Users/Konstantin/Documents/Code/external_projects/glad.zip"
+)
+FetchContent_MakeAvailable(glad)
+
+## SDL
+set(SDL2_DIR "folder/SDL.cmake" CACHE PATH "path to folder with gstreamer.ps")
+find_package(SDL2 REQUIRED)
+
+find_package(OpenGL REQUIRED)
+
+
+find_package(PkgConfig REQUIRED)
+pkg_search_module(GLIB REQUIRED IMPORTED_TARGET glib-2.0) 
+pkg_check_modules(GST REQUIRED IMPORTED_TARGET gstreamer-1.0)
+pkg_check_modules(GST_VIDEO REQUIRED IMPORTED_TARGET gstreamer-video-1.0)
+pkg_check_modules(GST_GL REQUIRED IMPORTED_TARGET gstreamer-gl-1.0)
+
+
+
+
+# COMPILE DEFINITIONS
+if(NOT MSVC)
+    add_compile_options(-Wall -Wextra)
+    if(PROJECT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
+        add_compile_options(-Werror)
+    endif()
+else()
+    add_compile_options(/permissive-)
+    # We want to pass this flag to link.exe. In CMake 3.13, we can use add_link_options
+    # /IGNORE:4221 # LNK4221 warns for empty cpp files. We use such files.
+endif()
+
+# SOURCES
+add_subdirectory(examples/show_image)

@@ -1,0 +1,3 @@
+C:/Users/Konstantin/Documents/Code/sdl_opengl/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Konstantin/Documents/Code/sdl_opengl/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/CMakeFiles/show_image.dir

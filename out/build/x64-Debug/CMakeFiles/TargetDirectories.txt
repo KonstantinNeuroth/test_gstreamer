@@ -1,0 +1,8 @@
+C:/Users/Konstantin/Documents/Code/sdl_opengl/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Konstantin/Documents/Code/sdl_opengl/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Konstantin/Documents/Code/sdl_opengl/out/build/x64-Debug/_deps/glad-build/CMakeFiles/glad.dir
+C:/Users/Konstantin/Documents/Code/sdl_opengl/out/build/x64-Debug/_deps/glad-build/CMakeFiles/edit_cache.dir
+C:/Users/Konstantin/Documents/Code/sdl_opengl/out/build/x64-Debug/_deps/glad-build/CMakeFiles/rebuild_cache.dir
+C:/Users/Konstantin/Documents/Code/sdl_opengl/out/build/x64-Debug/examples/show_image/CMakeFiles/show_image.dir
+C:/Users/Konstantin/Documents/Code/sdl_opengl/out/build/x64-Debug/examples/show_image/CMakeFiles/edit_cache.dir
+C:/Users/Konstantin/Documents/Code/sdl_opengl/out/build/x64-Debug/examples/show_image/CMakeFiles/rebuild_cache.dir

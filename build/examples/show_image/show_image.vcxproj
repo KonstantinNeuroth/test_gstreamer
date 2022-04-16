@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1E7F2F1B-58E7-39F5-81F4-BC4CD070A6C3}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>show_image</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <VcpkgEnabled>false</VcpkgEnabled>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Konstantin\Documents\Code\sdl_opengl\build\examples\show_image\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">show_image.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">show_image</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Konstantin\Documents\Code\sdl_opengl\build\examples\show_image\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">show_image.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">show_image</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Konstantin\Documents\Code\sdl_opengl\build\examples\show_image\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">show_image.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">show_image</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Konstantin\Documents\Code\sdl_opengl\build\examples\show_image\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">show_image.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">show_image</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Konstantin\Documents\Code\external_projects\SDL\include;C:\Users\Konstantin\Documents\Code\external_projects\SDL\include\SDL2;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\gstreamer-1.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\glib-2.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Konstantin\Documents\Code\external_projects\SDL\include;C:\Users\Konstantin\Documents\Code\external_projects\SDL\include\SDL2;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\gstreamer-1.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\glib-2.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Konstantin\Documents\Code\external_projects\SDL\include;C:\Users\Konstantin\Documents\Code\external_projects\SDL\include\SDL2;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\gstreamer-1.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\glib-2.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Konstantin/Documents/Code/external_projects/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/Debug/show_image.exe -installedDir C:/Users/Konstantin/Documents/Code/external_projects/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\Users\Konstantin\Documents\Code\external_projects\SDL\lib\SDL2d.lib;opengl32.lib;glu32.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstgl-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstvideo-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstbase-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstallocators-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\pcred.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gobject-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\libffi.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gmodule-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\pcred.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gobject-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\libffi.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gmodule-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\OpenGL32.Lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 C:/Users/Konstantin/Documents/Code/external_projects/vcpkg/installed/x64-windows/debug/lib/intl.lib</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/Debug/show_image.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/Debug/show_image.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Konstantin\Documents\Code\external_projects\SDL\include;C:\Users\Konstantin\Documents\Code\external_projects\SDL\include\SDL2;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\gstreamer-1.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\glib-2.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Konstantin\Documents\Code\external_projects\SDL\include;C:\Users\Konstantin\Documents\Code\external_projects\SDL\include\SDL2;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\gstreamer-1.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\glib-2.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Konstantin\Documents\Code\external_projects\SDL\include;C:\Users\Konstantin\Documents\Code\external_projects\SDL\include\SDL2;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\gstreamer-1.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\glib-2.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Konstantin/Documents/Code/external_projects/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/Release/show_image.exe -installedDir C:/Users/Konstantin/Documents/Code/external_projects/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\Users\Konstantin\Documents\Code\external_projects\SDL\lib\SDL2.lib;opengl32.lib;glu32.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstgl-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstvideo-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstbase-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstallocators-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\pcred.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gobject-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\libffi.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gmodule-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\pcred.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gobject-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\libffi.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gmodule-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\OpenGL32.Lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 C:/Users/Konstantin/Documents/Code/external_projects/vcpkg/installed/x64-windows/debug/lib/intl.lib</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/Release/show_image.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/Release/show_image.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Konstantin\Documents\Code\external_projects\SDL\include;C:\Users\Konstantin\Documents\Code\external_projects\SDL\include\SDL2;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\gstreamer-1.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\glib-2.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Konstantin\Documents\Code\external_projects\SDL\include;C:\Users\Konstantin\Documents\Code\external_projects\SDL\include\SDL2;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\gstreamer-1.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\glib-2.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Konstantin\Documents\Code\external_projects\SDL\include;C:\Users\Konstantin\Documents\Code\external_projects\SDL\include\SDL2;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\gstreamer-1.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\glib-2.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Konstantin/Documents/Code/external_projects/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/MinSizeRel/show_image.exe -installedDir C:/Users/Konstantin/Documents/Code/external_projects/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\Users\Konstantin\Documents\Code\external_projects\SDL\lib\SDL2.lib;opengl32.lib;glu32.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstgl-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstvideo-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstbase-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstallocators-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\pcred.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gobject-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\libffi.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gmodule-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\pcred.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gobject-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\libffi.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gmodule-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\OpenGL32.Lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 C:/Users/Konstantin/Documents/Code/external_projects/vcpkg/installed/x64-windows/debug/lib/intl.lib</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/MinSizeRel/show_image.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/MinSizeRel/show_image.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Konstantin\Documents\Code\external_projects\SDL\include;C:\Users\Konstantin\Documents\Code\external_projects\SDL\include\SDL2;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\gstreamer-1.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\glib-2.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Konstantin\Documents\Code\external_projects\SDL\include;C:\Users\Konstantin\Documents\Code\external_projects\SDL\include\SDL2;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\gstreamer-1.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\glib-2.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Konstantin\Documents\Code\external_projects\SDL\include;C:\Users\Konstantin\Documents\Code\external_projects\SDL\include\SDL2;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\gstreamer-1.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include\glib-2.0;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\..\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0\include;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Konstantin/Documents/Code/external_projects/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/RelWithDebInfo/show_image.exe -installedDir C:/Users/Konstantin/Documents/Code/external_projects/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\Users\Konstantin\Documents\Code\external_projects\SDL\lib\SDL2.lib;opengl32.lib;glu32.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstgl-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstvideo-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstbase-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstallocators-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gstreamer-1.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\pcred.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gobject-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\libffi.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gmodule-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\pcred.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gobject-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\glib-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\libffi.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\gmodule-2.0.lib;C:\Users\Konstantin\Documents\Code\external_projects\vcpkg\installed\x64-windows\debug\lib\OpenGL32.Lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 C:/Users/Konstantin/Documents/Code/external_projects/vcpkg/installed/x64-windows/debug/lib/intl.lib</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/RelWithDebInfo/show_image.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/RelWithDebInfo/show_image.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Konstantin\Documents\Code\sdl_opengl\examples\show_image\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Konstantin/Documents/Code/sdl_opengl/examples/show_image/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Konstantin/Documents/Code/sdl_opengl -BC:/Users/Konstantin/Documents/Code/sdl_opengl/build --check-stamp-file C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Konstantin\Documents\Code\sdl_opengl\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Konstantin\Documents\Code\sdl_opengl\build\examples\show_image\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Konstantin/Documents/Code/sdl_opengl/examples/show_image/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Konstantin/Documents/Code/sdl_opengl -BC:/Users/Konstantin/Documents/Code/sdl_opengl/build --check-stamp-file C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Konstantin\Documents\Code\sdl_opengl\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Konstantin\Documents\Code\sdl_opengl\build\examples\show_image\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Konstantin/Documents/Code/sdl_opengl/examples/show_image/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Konstantin/Documents/Code/sdl_opengl -BC:/Users/Konstantin/Documents/Code/sdl_opengl/build --check-stamp-file C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Konstantin\Documents\Code\sdl_opengl\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Konstantin\Documents\Code\sdl_opengl\build\examples\show_image\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Konstantin/Documents/Code/sdl_opengl/examples/show_image/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Konstantin/Documents/Code/sdl_opengl -BC:/Users/Konstantin/Documents/Code/sdl_opengl/build --check-stamp-file C:/Users/Konstantin/Documents/Code/sdl_opengl/build/examples/show_image/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Konstantin\Documents\Code\sdl_opengl\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Konstantin\Documents\Code\sdl_opengl\build\examples\show_image\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Konstantin\Documents\Code\sdl_opengl\examples\show_image\OpenglVector.h" />
+    <ClInclude Include="C:\Users\Konstantin\Documents\Code\sdl_opengl\examples\show_image\Shader.h" />
+    <ClInclude Include="C:\Users\Konstantin\Documents\Code\sdl_opengl\examples\show_image\Texture.h" />
+    <ClInclude Include="C:\Users\Konstantin\Documents\Code\sdl_opengl\examples\show_image\WindowManager.h" />
+    <ClCompile Include="C:\Users\Konstantin\Documents\Code\sdl_opengl\examples\show_image\main.cpp" />
+    <ClInclude Include="C:\Users\Konstantin\Documents\Code\sdl_opengl\examples\show_image\stb\image.h" />
+    <ClInclude Include="C:\Users\Konstantin\Documents\Code\sdl_opengl\examples\show_image\stb\stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Konstantin\Documents\Code\sdl_opengl\build\ZERO_CHECK.vcxproj">
+      <Project>{C5EAA560-1F24-3052-91C4-E99C5D16D805}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
