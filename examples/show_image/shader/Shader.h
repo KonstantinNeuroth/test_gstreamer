@@ -38,7 +38,7 @@ class Shader {
   unsigned int adress() { return adr_; }
 
  private:
-  unsigned int adr_;
+  unsigned int adr_ = 0;
   std::string to_string(Type t) {
     if (t == VERTEX) return "VERTEX";
     if (t == FRAGMENT) return "FRAGMENT";

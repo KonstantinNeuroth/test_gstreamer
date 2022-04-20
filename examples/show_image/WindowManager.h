@@ -20,7 +20,7 @@ class Window {
     window = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
                               SDL_WINDOWPOS_CENTERED, SCR_WIDTH, SCR_HEIGHT,
                               SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN);
-    if (window == NULL) std::cout << "Couldn't set video mode" << std::endl;
+    if (window == NULL) std::cout << "Could not create video." << std::endl;
 
     context = SDL_GL_CreateContext(window);
     SDL_GL_SetSwapInterval(1);
@@ -43,6 +43,8 @@ class Window {
   void makeCurrent() { SDL_GL_MakeCurrent(window, context); }
 
   void swapBuffers() { SDL_GL_SwapWindow(window); }
+
+  void* getContextHandle() { return context; }
 
  private:
   SDL_Window* window;

@@ -1,3 +1,0 @@
-repository='external project URL'
-module='C:/Users/Konstantin/Documents/Code/external_projects/glad.zip'
-tag=''

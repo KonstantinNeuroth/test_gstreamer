@@ -7,7 +7,7 @@
 namespace utilities {
 namespace opengl {
 
-void interface(std::vector<size_t> sizes) {
+void vertattIF(std::vector<size_t> sizes) {
   int total_size = std::accumulate(sizes.begin(), sizes.end(), 0);
   size_t offset = 0;
   for (size_t i = 0; i < sizes.size(); ++i) {

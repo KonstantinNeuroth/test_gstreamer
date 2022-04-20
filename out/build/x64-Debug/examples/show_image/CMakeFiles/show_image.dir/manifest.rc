@@ -1,2 +1,2 @@
 #pragma code_page(65001)
-1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/Konstantin/Documents/Code/sdl_opengl/out/build/x64-Debug/examples/show_image/CMakeFiles/show_image.dir/embed.manifest"
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Code/test_gstreamer/out/build/x64-Debug/examples/show_image/CMakeFiles/show_image.dir/embed.manifest"

@@ -1,15 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\cmake",
     "\\examples",
     "\\examples\\show_image",
     "\\examples\\show_image\\buffer",
-    "\\examples\\show_image\\shader",
-    "\\examples\\show_image\\shader\\def",
-    "\\examples\\show_image\\shader\\def\\string",
-    "\\examples\\show_image\\stb",
-    "\\out"
+    "\\examples\\show_image\\gstreamer",
+    "\\examples\\show_image\\opengl",
+    "\\examples\\show_image\\shader"
   ],
-  "SelectedNode": "\\examples\\show_image\\main.cpp",
+  "SelectedNode": "\\examples\\show_image\\WindowManager.h",
   "PreviewInSolutionExplorer": false
 }

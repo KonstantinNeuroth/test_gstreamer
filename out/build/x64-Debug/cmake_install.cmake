@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Konstantin/Documents/Code/sdl_opengl
+# Install script for directory: C:/Code/test_gstreamer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/Konstantin/Documents/Code/sdl_opengl/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Code/test_gstreamer/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,8 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Konstantin/Documents/Code/sdl_opengl/out/build/x64-Debug/_deps/glad-build/cmake_install.cmake")
-  include("C:/Users/Konstantin/Documents/Code/sdl_opengl/out/build/x64-Debug/examples/show_image/cmake_install.cmake")
+  include("C:/Code/test_gstreamer/out/build/x64-Debug/examples/show_image/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Konstantin/Documents/Code/sdl_opengl/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Code/test_gstreamer/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

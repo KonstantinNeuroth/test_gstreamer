@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Konstantin/Documents/Code/sdl_opengl/examples/show_image
+# Install script for directory: C:/Code/test_gstreamer/examples/show_image
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/Konstantin/Documents/Code/sdl_opengl/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Code/test_gstreamer/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

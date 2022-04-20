@@ -9,11 +9,14 @@ file(GLOB_RECURSE src_files
 
 add_executable(${ProjectId}  ${src_files})
 target_link_libraries(${ProjectId}  PRIVATE 
-    SDL2::SDL2
+    CONAN_PKG::glad
+    CONAN_PKG::sdl
     PkgConfig::GST
     PkgConfig::GST_VIDEO
     PkgConfig::GST_GL
-    glad
+    PkgConfig::GST_BASE
+    PkgConfig::GST_PLUGIN_BASE
+    PkgConfig::GST_INSB
     OpenGL::GL
     OpenGL::GLU
 )

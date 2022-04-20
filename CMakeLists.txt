@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 3.12)
 
 # HEADER
 list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
-set(CMAKE_TOOLCHAIN_FILE "C:/Users/Konstantin/Documents/Code/external_projects/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
+
+set(ENV{PKG_CONFIG_PATH} "$ENV{PKG_CONFIG_PATH}:C:/gstreamer/1.0/msvc_x86_64/lib/pkgconfig")
+
 
 project(sdl_opengl
     VERSION 0.0.1
@@ -11,26 +13,34 @@ project(sdl_opengl
 )
 
 # 3rd party libs
-include(FetchContent)
-FetchContent_Declare(
-  glad
-  URL      "C:/Users/Konstantin/Documents/Code/external_projects/glad.zip"
+if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/cmake/conan.cmake")
+   message(STATUS "Downloading conan.cmake from https://github.com/conan-io/cmake-conan")
+   file(DOWNLOAD "https://raw.githubusercontent.com/conan-io/cmake-conan/master/conan.cmake"
+                  "${CMAKE_CURRENT_SOURCE_DIR}/cmake/conan.cmake")
+endif()
+
+include(conan)
+conan_cmake_run(
+  REQUIRES
+    glad/0.1.35
+    sdl/2.0.20
+    pkgconf/1.7.4
+
+  BASIC_SETUP CMAKE_TARGETS
+  BUILD missing
 )
-FetchContent_MakeAvailable(glad)
-
-## SDL
-set(SDL2_DIR "folder/SDL.cmake" CACHE PATH "path to folder with gstreamer.ps")
-find_package(SDL2 REQUIRED)
-
-find_package(OpenGL REQUIRED)
-
 
 find_package(PkgConfig REQUIRED)
+
 pkg_search_module(GLIB REQUIRED IMPORTED_TARGET glib-2.0) 
 pkg_check_modules(GST REQUIRED IMPORTED_TARGET gstreamer-1.0)
 pkg_check_modules(GST_VIDEO REQUIRED IMPORTED_TARGET gstreamer-video-1.0)
 pkg_check_modules(GST_GL REQUIRED IMPORTED_TARGET gstreamer-gl-1.0)
+pkg_check_modules(GST_PLUGIN_BASE REQUIRED IMPORTED_TARGET gstreamer-plugins-base-1.0)
+pkg_check_modules(GST_BASE REQUIRED IMPORTED_TARGET gstreamer-base-1.0)
+pkg_check_modules(GST_INSB REQUIRED IMPORTED_TARGET gstreamer-insertbin-1.0)
 
+find_package(OpenGL REQUIRED)
 
 
 
