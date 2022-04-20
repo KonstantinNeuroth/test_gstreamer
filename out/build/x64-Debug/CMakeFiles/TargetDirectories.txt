@@ -1,5 +1,0 @@
-C:/Code/test_gstreamer/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-C:/Code/test_gstreamer/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
-C:/Code/test_gstreamer/out/build/x64-Debug/examples/show_image/CMakeFiles/show_image.dir
-C:/Code/test_gstreamer/out/build/x64-Debug/examples/show_image/CMakeFiles/edit_cache.dir
-C:/Code/test_gstreamer/out/build/x64-Debug/examples/show_image/CMakeFiles/rebuild_cache.dir
