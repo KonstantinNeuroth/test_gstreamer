@@ -485,7 +485,7 @@ static void sync_bus_call(GstBus* bus, GstMessage* msg, gpointer data) {
   }
 }
 
-static void sdl_event_loop(GstBus* bus, Context__ * wrap) {
+static void sdl_event_loop(GstBus* bus, Context__* wrap) {
   GstVideoFrame* vframe = NULL;
   gboolean quit = FALSE;
 
@@ -582,75 +582,36 @@ static void sdl_event_loop(GstBus* bus, Context__ * wrap) {
 }
 
 int main(int argc, char** argv) {
-  GstPipeline* pipeline = NULL;
-  HGLRC gl_context = 0;
-  HDC sdl_dc = 0;
 
-  GstBus* bus = NULL;
-  GstCaps* caps;
-  GstElement* appsink;
-  GstGLPlatform gl_platform;
-  GError* err = NULL;
-  GstGLAPI gl_api;
+  //WindowManager::instance();
+  //GstreamManager::instance();
 
-  /* Initialize SDL for video output */
-  if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-    fprintf(stderr, "Unable to initialize SDL: %s\n", SDL_GetError());
-    return -1;
-  }
-
-  gst_init(&argc, &argv);
-
-  SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
-  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
-  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
+  auto window = WindowManager::instance().createWindow("window");
 
   sdl_message_event = SDL_RegisterEvents(1);
   g_assert(sdl_message_event != -1);
 
+  GlContextWrapper wrap =
+      GstreamManager::instance().wrapGLContext(window.getContextHandle(), "");
+
   /* Create a 640x480 OpenGL window */
   Context__ context_wrap{};
-  context_wrap.sdl_window =
-      SDL_CreateWindow("SDL and gst-plugins-gl", SDL_WINDOWPOS_UNDEFINED,
-                       SDL_WINDOWPOS_UNDEFINED, 640, 480, SDL_WINDOW_OPENGL);
-  if (context_wrap.sdl_window == NULL) {
-    fprintf(stderr, "Unable to create OpenGL screen: %s\n", SDL_GetError());
-    SDL_Quit();
-    return -1;
-  }
+  context_wrap.sdl_window = window.getWindowHandle();
+  context_wrap.sdl_gl_context = window.getContextHandle();
+  window.makeCurrent();
 
-  /* Create GL context and a wrapped GStreamer context around it */
-  context_wrap.sdl_gl_context = SDL_GL_CreateContext(context_wrap.sdl_window);
+  context_wrap.sdl_gl_display = wrap.getDisplayHandle();
+  context_wrap.sdl_context = wrap.getContextHandle();
+  wrap.activate(true);
 
-  SDL_GL_MakeCurrent(context_wrap.sdl_window, context_wrap.sdl_gl_context);
+  //SDL_GL_MakeCurrent(context_wrap.sdl_window, NULL);
 
-  gl_context = wglGetCurrentContext();
-  sdl_dc = wglGetCurrentDC();
-  gl_platform = GST_GL_PLATFORM_WGL;
-  context_wrap.sdl_gl_display = gst_gl_display_new();
-
-  gl_api = gst_gl_context_get_current_gl_api(gl_platform, NULL, NULL);
-
-  context_wrap.sdl_context = gst_gl_context_new_wrapped(
-      context_wrap.sdl_gl_display, (guintptr)gl_context, gl_platform, gl_api);
-
-  gst_gl_context_activate(context_wrap.sdl_context, TRUE);
-
-  if (!gst_gl_context_fill_info(context_wrap.sdl_context, &err)) {
-    fprintf(stderr, "Failed to fill in wrapped GStreamer context: %s\n",
-            err->message);
-    g_clear_error(&err);
-    SDL_Quit();
-    return -1;
-  }
-  SDL_GL_MakeCurrent(context_wrap.sdl_window, NULL);
-
-  pipeline = GST_PIPELINE(gst_parse_launch(
+  GstPipeline* pipeline = GST_PIPELINE(gst_parse_launch(
       "videotestsrc ! glupload name=upload ! gleffects effect=5 ! "
       "appsink name=sink",
       NULL));
 
-  bus = gst_pipeline_get_bus(GST_PIPELINE(pipeline));
+  GstBus* bus = gst_pipeline_get_bus(GST_PIPELINE(pipeline));
   gst_bus_enable_sync_message_emission(bus);
   g_signal_connect(bus, "sync-message", G_CALLBACK(sync_bus_call),
                    &context_wrap);
@@ -658,14 +619,14 @@ int main(int argc, char** argv) {
   context_wrap.queue_input_buf = g_async_queue_new();
   context_wrap.queue_output_buf = g_async_queue_new();
 
-  appsink = gst_bin_get_by_name(GST_BIN(pipeline), "sink");
+  GstElement* appsink = gst_bin_get_by_name(GST_BIN(pipeline), "sink");
 
   GstStaticCaps render_caps = GST_STATIC_CAPS(
       "video/"
       "x-raw(memory:GLMemory),format=RGBA,width=320,height=240,framerate=("
       "fraction)30/1,texture-target=2D");
 
-  caps = gst_static_caps_get(&render_caps);
+  GstCaps* caps = gst_static_caps_get(&render_caps);
 
   if (!gst_video_info_from_caps(&context_wrap.render_video_info, caps))
     g_assert_not_reached();
@@ -685,10 +646,6 @@ int main(int argc, char** argv) {
 
   gst_object_unref(bus);
 
-  gst_gl_context_activate(context_wrap.sdl_context, FALSE);
-  gst_object_unref(context_wrap.sdl_context);
-  gst_object_unref(context_wrap.sdl_gl_display);
-  if (context_wrap.gst_context) gst_object_unref(context_wrap.gst_context);
 
   /* make sure there is no pending gst gl buffer in the communication queues
    * between sdl and gst-gl
@@ -706,12 +663,6 @@ int main(int argc, char** argv) {
     gst_video_frame_unmap(vframe);
     g_free(vframe);
   }
-
-  SDL_GL_DeleteContext(gl_context);
-
-  SDL_DestroyWindow(context_wrap.sdl_window);
-
-  SDL_Quit();
 
   return 0;
 }

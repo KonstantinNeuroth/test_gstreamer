@@ -44,7 +44,8 @@ class Window {
 
   void swapBuffers() { SDL_GL_SwapWindow(window); }
 
-  void* getContextHandle() { return context; }
+  SDL_GLContext getContextHandle() { return context; }
+  SDL_Window* getWindowHandle() { return window; }
 
  private:
   SDL_Window* window;
@@ -58,8 +59,7 @@ class WindowManager {
     return instance_;
   }
 
-  Window create(std::string name) { return Window(name); }
-  Window* createNew(std::string name) { return new Window(name); }
+  Window createWindow(std::string name) { return Window(name); }
 
   WindowManager(WindowManager const&) = delete;
   void operator=(WindowManager const&) = delete;
